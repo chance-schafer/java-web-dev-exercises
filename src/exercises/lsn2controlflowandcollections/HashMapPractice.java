@@ -6,6 +6,8 @@ import java.util.Map;
 
 public class HashMapPractice {
 
+
+
     public static void main(String[] args) {
 
         HashMap<Integer, String> students = new HashMap<>();
