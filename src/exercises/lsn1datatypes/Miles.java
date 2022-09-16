@@ -12,6 +12,5 @@ public class Miles {
         Double width = input.nextDouble();
         Double area = width * length;
         System.out.println("The area of the rectangle is " + area);
-
     }
 }
