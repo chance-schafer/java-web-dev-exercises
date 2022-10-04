@@ -1,11 +1,10 @@
-package org.launchcode.java.studios.class04funwithquizzes;
+package org.launchcode.java.studios.class06funwithquizzes;
 
-public class MultipleChoice extends Question {
+public class TrueFalse extends Question {
 
-    public MultipleChoice(String question, String answer) {
+    public TrueFalse(String question, String answer) {
         super(question, answer);
     }
-
 
     public boolean checkAnswer(String answer) {
         String correctAnswer = this.getAnswer();

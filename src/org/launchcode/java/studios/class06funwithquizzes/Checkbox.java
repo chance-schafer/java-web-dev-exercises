@@ -1,8 +1,8 @@
-package org.launchcode.java.studios.class04funwithquizzes;
+package org.launchcode.java.studios.class06funwithquizzes;
 
-public class TrueFalse extends Question {
+public class Checkbox extends Question {
 
-    public TrueFalse(String question, String answer) {
+    public Checkbox(String question, String answer) {
         super(question, answer);
     }
 

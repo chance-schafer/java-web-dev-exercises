@@ -1,4 +1,4 @@
-package org.launchcode.java.studios.class04funwithquizzes;
+package org.launchcode.java.studios.class06funwithquizzes;
 
 import java.util.ArrayList;
 import java.util.Scanner;

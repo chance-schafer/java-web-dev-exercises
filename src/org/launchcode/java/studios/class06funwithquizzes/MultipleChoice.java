@@ -1,10 +1,11 @@
-package org.launchcode.java.studios.class04funwithquizzes;
+package org.launchcode.java.studios.class06funwithquizzes;
 
-public class Checkbox extends Question {
+public class MultipleChoice extends Question {
 
-    public Checkbox(String question, String answer) {
+    public MultipleChoice(String question, String answer) {
         super(question, answer);
     }
+
 
     public boolean checkAnswer(String answer) {
         String correctAnswer = this.getAnswer();
