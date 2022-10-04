@@ -1,36 +1,51 @@
 package org.launchcode.java.studios.restaurantmenu.restaurant;
 
+import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
+import java.util.ArrayList;
+//import java.util.Arrays;
 
 public class Menu {
 
-    Date lastUpdated;
-    int numOfNewItems;
+    private Date dateLastUpdated;
+    private MenuItem special;
+    private ArrayList<MenuItem> items;
 
-    public void findNewItems() {
+    public Menu(ArrayList<MenuItem> items) {
+        this.items = items;
+        this.dateLastUpdated = new Date();
     }
 
-    public void findLatestUpdate() {
-
+    // Getters
+    public MenuItem getSpecial() {
+        return special;
+    }
+    public Date getDateLastUpdated() {
+        return dateLastUpdated;
+    }
+    public ArrayList<MenuItem> getItems() {
+        return items;
     }
 
-    Menu firstMenu = new Menu();
+    // Setters
 
-    public static void main(String[] args) {
-
-        HashMap<String, String> menuItems = new HashMap<>();
-        MenuItem wontonDip = new MenuItem("Delicious, savory dip!", 6.99, "Appetizer", true);
-
-        wontonDip.setMenuItemName("Wonton Dip");
-
-        Date date = new Date();
-        String dateString = date.toString();
-
-        menuItems.put(wontonDip.name, dateString);
-
-        System.out.print(menuItems.entrySet());
-
-
+    public void setSpecial(MenuItem special) {
+        this.special = special;
     }
+
+    public void addItem(MenuItem item) {
+        this.items.add(item);
+    }
+
+    public void removeItem(MenuItem item) {
+        this.items.remove(item);
+    }
+
+    public void printMenu() {
+        for(MenuItem item : items) {
+            System.out.println(item.itemListing());
+            System.out.println("----------");
+        }
+    }
+
 }
