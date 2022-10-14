@@ -5,11 +5,13 @@ public class SchoolPractice {
         // Instantiate your Student class for part 2 here!
 
         Student chance = new Student();
-        chance.setNumberOfCredits(1);
+        chance.setNumberOfCredits(12);
         chance.setName("Chance");
         chance.setGpa(4.0);
 
         Course science = new Course("Mr. Roberts", 3, "Science", "Intro to Biology 101");
+
+        System.out.println(chance.getGradeLevel(chance.getNumberOfCredits()));
 
     }
 }

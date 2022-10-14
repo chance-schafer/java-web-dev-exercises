@@ -35,11 +35,53 @@ public class Student {
     }
 
     public int getNumberOfCredits(){
-        return numberOfCredits;
+        return this.numberOfCredits;
     }
 
     public double getGpa() {
         return gpa;
+    }
+
+    public static String getGradeLevel(int credits) {
+        if (credits <= 29){
+            return "freshman";
+        } else if (credits <= 59){
+            return "sophomore";
+        } else if (credits <= 89) {
+            return "junior";
+        } else {
+            return "senior";
+        }
+    }
+
+    public void addGrade(int credits, double grade) {
+        double totalQualityScore = this.gpa * this.numberOfCredits;
+        totalQualityScore += credits * grade;
+        this.numberOfCredits += credits;
+        this.gpa = totalQualityScore/this.numberOfCredits;
+
+    }
+
+    public String toString() {
+        String studentReport = String.format("%s is a %s with %d credits and a GPA of %.2f", this.name, this.getGradeLevel(this.numberOfCredits), this.getNumberOfCredits(), this.getGpa());
+        return studentReport;
+    }
+
+    public boolean equals(Object toBeCompared) {
+        if (toBeCompared == this) {
+            return true;
+        }
+
+        if (toBeCompared == null) {
+            return false;
+        }
+
+        if (toBeCompared.getClass() != getClass()) {
+            return false;
+        }
+
+        Student theStudent = (Student) toBeCompared;
+        return theStudent.getStudentId() == getStudentId();
     }
 
 
